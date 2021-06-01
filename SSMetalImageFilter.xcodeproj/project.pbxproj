@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83959EA6262217590003492F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83959EA5262217590003492F /* FilterViewController.swift */; };
+		83946F4B26666AE900842FD9 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83959EA5262217590003492F /* FilterViewController.swift */; };
 		83B58CDD25C8385A00DDFB22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B58CDC25C8385A00DDFB22 /* AppDelegate.swift */; };
 		83B58CE425C8385A00DDFB22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B58CE225C8385A00DDFB22 /* Main.storyboard */; };
 		83B58CE625C8385B00DDFB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B58CE525C8385B00DDFB22 /* Assets.xcassets */; };
@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		83959EA5262217590003492F /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
-		83B58CD925C8385A00DDFB22 /* ImageFilter_ML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFilter_ML.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B58CD925C8385A00DDFB22 /* SSMetalImageFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSMetalImageFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B58CDC25C8385A00DDFB22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B58CE325C8385A00DDFB22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83B58CE525C8385B00DDFB22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		83B58CD025C8385A00DDFB22 = {
 			isa = PBXGroup;
 			children = (
-				83B58CDB25C8385A00DDFB22 /* ImageFilter_ML */,
+				83B58CDB25C8385A00DDFB22 /* SSMetalImageFilter */,
 				83B58CDA25C8385A00DDFB22 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,12 +74,12 @@
 		83B58CDA25C8385A00DDFB22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83B58CD925C8385A00DDFB22 /* ImageFilter_ML.app */,
+				83B58CD925C8385A00DDFB22 /* SSMetalImageFilter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		83B58CDB25C8385A00DDFB22 /* ImageFilter_ML */ = {
+		83B58CDB25C8385A00DDFB22 /* SSMetalImageFilter */ = {
 			isa = PBXGroup;
 			children = (
 				83B58CDC25C8385A00DDFB22 /* AppDelegate.swift */,
@@ -88,7 +88,7 @@
 				83959EA3262217190003492F /* Controller */,
 				83959EA22622170C0003492F /* View */,
 			);
-			path = ImageFilter_ML;
+			path = SSMetalImageFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,7 +108,7 @@
 			);
 			name = ImageFilter_ML;
 			productName = ImageFilter_ML;
-			productReference = 83B58CD925C8385A00DDFB22 /* ImageFilter_ML.app */;
+			productReference = 83B58CD925C8385A00DDFB22 /* SSMetalImageFilter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,13 +119,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = Simform;
 				TargetAttributes = {
 					83B58CD825C8385A00DDFB22 = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
-			buildConfigurationList = 83B58CD425C8385A00DDFB22 /* Build configuration list for PBXProject "ImageFilter_ML" */;
+			buildConfigurationList = 83B58CD425C8385A00DDFB22 /* Build configuration list for PBXProject "SSMetalImageFilter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -162,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83959EA6262217590003492F /* FilterViewController.swift in Sources */,
+				83946F4B26666AE900842FD9 /* FilterViewController.swift in Sources */,
 				83B58CDD25C8385A00DDFB22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,13 +313,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K7XJG666ZW;
-				INFOPLIST_FILE = ImageFilter_ML/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SSMetalImageFilter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.metalimagefilter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SSMetalImageFilter;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -332,13 +334,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K7XJG666ZW;
-				INFOPLIST_FILE = ImageFilter_ML/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SSMetalImageFilter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.metalimagefilter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SSMetalImageFilter;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -348,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83B58CD425C8385A00DDFB22 /* Build configuration list for PBXProject "ImageFilter_ML" */ = {
+		83B58CD425C8385A00DDFB22 /* Build configuration list for PBXProject "SSMetalImageFilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83B58CEB25C8385B00DDFB22 /* Debug */,
