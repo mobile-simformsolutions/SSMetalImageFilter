@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ImageFilter_ML
+//  SSMetalImageFilter
 //
 //  Created by Vishva Bhatt on 01/02/21.
 //

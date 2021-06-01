@@ -1,6 +1,6 @@
 //
 //  FilterViewController.swift
-//  ImageFilter_ML
+//  SSMetalImageFilter
 //
 //  Created by Vishva Bhatt on 10/04/21.
 //
