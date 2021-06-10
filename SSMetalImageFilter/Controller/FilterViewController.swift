@@ -34,7 +34,11 @@ class FilterViewController: UIViewController {
 
     //MARK: View Life Cycle
     override func viewDidLoad() {
-        
+        self.setupMetal()
+    }
+
+    //MARK: User defined methods
+    func setupMetal(){
         device = MTLCreateSystemDefaultDevice()
         commandQueue = device.makeCommandQueue()
         
@@ -60,10 +64,8 @@ class FilterViewController: UIViewController {
                                                options: [MTKTextureLoader.Option.origin: MTKTextureLoader.Origin.flippedVertically])
         #endif
         self.metalView.clearColor = MTLClearColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-        
     }
-
-    //MARK: User defined methods
+    
     func handleViewStates(isUserInteractionEnabled:Bool=false) {
         DispatchQueue.main.async {
             if (isUserInteractionEnabled == false) {
