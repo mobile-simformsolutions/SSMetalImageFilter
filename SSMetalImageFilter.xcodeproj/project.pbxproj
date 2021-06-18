@@ -12,7 +12,8 @@
 		83B58CE425C8385A00DDFB22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B58CE225C8385A00DDFB22 /* Main.storyboard */; };
 		83B58CE625C8385B00DDFB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B58CE525C8385B00DDFB22 /* Assets.xcassets */; };
 		83B58CE925C8385B00DDFB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B58CE725C8385B00DDFB22 /* LaunchScreen.storyboard */; };
-		83C614C5265CC9420053C197 /* TestImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C614C4265CC9420053C197 /* TestImage.jpg */; };
+		83D1BCF6267C93F0001E1C9F /* WorkPlay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83D1BCF5267C93F0001E1C9F /* WorkPlay.jpg */; };
+		83F87E0D267B7A2E00B3BD94 /* TestImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C614C4265CC9420053C197 /* TestImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		83B58CE825C8385B00DDFB22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83B58CEA25C8385B00DDFB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83C614C4265CC9420053C197 /* TestImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TestImage.jpg; sourceTree = "<group>"; };
+		83D1BCF5267C93F0001E1C9F /* WorkPlay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WorkPlay.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		83959EA42622172B0003492F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				83D1BCF5267C93F0001E1C9F /* WorkPlay.jpg */,
 				83B58CE525C8385B00DDFB22 /* Assets.xcassets */,
 				83C614C4265CC9420053C197 /* TestImage.jpg */,
 			);
@@ -149,9 +152,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D1BCF6267C93F0001E1C9F /* WorkPlay.jpg in Resources */,
 				83B58CE925C8385B00DDFB22 /* LaunchScreen.storyboard in Resources */,
+				83F87E0D267B7A2E00B3BD94 /* TestImage.jpg in Resources */,
 				83B58CE625C8385B00DDFB22 /* Assets.xcassets in Resources */,
-				83C614C5265CC9420053C197 /* TestImage.jpg in Resources */,
 				83B58CE425C8385A00DDFB22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
