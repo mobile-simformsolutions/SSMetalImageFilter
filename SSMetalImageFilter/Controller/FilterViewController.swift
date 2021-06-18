@@ -8,10 +8,15 @@
 import UIKit
 import MetalKit
 
+enum PhotoTest : String {
+    case workPlay = "WorkPlay"
+    case tropical = "TestImage"
+
+}
+
 class FilterViewController: UIViewController {
     
     //MARK: Outlets
-
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var saturationSlider: UISlider!
     @IBOutlet weak var modeSegment: UISegmentedControl!
@@ -31,7 +36,8 @@ class FilterViewController: UIViewController {
     let colorSpace = CGColorSpaceCreateDeviceRGB()
     
     var inputImageURL : URL!
-
+    var currentImage : PhotoTest = PhotoTest.workPlay
+    
     //MARK: View Life Cycle
     override func viewDidLoad() {
         self.setupMetal()
@@ -50,7 +56,7 @@ class FilterViewController: UIViewController {
         
         // load texture as an MTL Texture
         let loader = MTKTextureLoader(device: device)
-        guard let url = Bundle.main.url(forResource: "TestImage", withExtension: "jpg"), let image = UIImage(named: "TestImage.jpg") else {
+        guard let url = Bundle.main.url(forResource: currentImage.rawValue, withExtension: "jpg"), let image = UIImage(named: "\(currentImage.rawValue).jpg") else {
             return
         }
         inputImageURL = url;
@@ -135,11 +141,12 @@ class FilterViewController: UIViewController {
         let processedImage = UIImage(ciImage: outputImage, scale: 1, orientation: UIImage.Orientation.downMirrored)
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         if let filePath = paths.first?.appendingPathComponent("FilteredImage.jpg") {
+            print("Output Path \(filePath)")
             if FileManager.default.fileExists(atPath: filePath.path) {
                 try? FileManager.default.removeItem(atPath: filePath.path)
             }
             do {
-                try processedImage.jpegData(compressionQuality: 0.9)?.write(to: filePath, options: .atomic)
+                try processedImage.jpegData(compressionQuality: 0.8)?.write(to: filePath, options: .atomic)
             } catch {
                 // Handle the error
             }
@@ -169,8 +176,8 @@ extension FilterViewController: MTKViewDelegate {
             
             let width = inputImage.extent.width * scale
             let height = inputImage.extent.height * scale
-            let originX = (bounds.width - width) / (UIScreen.main.scale)
-            let originY = (bounds.height - height) / (UIScreen.main.scale)
+            let originX = (bounds.width - width) / 2
+            let originY = (bounds.height - height) / 2
             
             if let saturationOutput = saturationFilter.outputImage {
                     let scaledImage = saturationOutput
